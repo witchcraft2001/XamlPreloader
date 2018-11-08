@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <local:Preloader />
+        <Viewbox Width="80" Height="80">
+            <local:Preloader />
+        </Viewbox>
+        
     </Grid>
 </Window>
