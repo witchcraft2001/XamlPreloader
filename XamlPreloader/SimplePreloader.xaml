@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="XamlPreloader.SimplePreloader"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:XamlPreloader"
+             mc:Ignorable="d">
+    <Canvas Height="150" Width="150">
+        <Path Stroke="#9370DB" StrokeThickness="16" RenderTransformOrigin="0.5, 0.5" StrokeEndLineCap="Round" StrokeStartLineCap="Round" Height="150" Stretch="Fill" Width="150">
+            <Path.Data>
+                <PathGeometry Figures="M 139.77658 73.01738 A 64.679222 64.679222 0 0 1 91.487021 135.58559 64.679222 64.679222 0 0 1 18.724391 104.72685 64.679222 64.679222 0 0 1 30.137967 26.519478 64.679222 64.679222 0 0 1 108.68498 17.742851" FillRule="NonZero"/>
+            </Path.Data>
+            <Path.RenderTransform>
+                <RotateTransform x:Name="bigCircle"/>
+            </Path.RenderTransform>
+            <Path.Triggers>
+                <EventTrigger RoutedEvent="Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation
+                                    Storyboard.TargetProperty="(Path.RenderTransform).(RotateTransform.Angle)"
+                                    To="360" Duration="0:0:1.5" RepeatBehavior="Forever"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Path.Triggers>
+        </Path>
+    </Canvas>
+</UserControl>

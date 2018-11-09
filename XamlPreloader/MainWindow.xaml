@@ -7,8 +7,15 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <Viewbox Width="80" Height="80">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Viewbox Grid.Column="0" Width="80" Height="80">
             <local:Preloader />
+        </Viewbox>
+        <Viewbox Grid.Column="1" Width="80" Height="80">
+            <local:SimplePreloader />
         </Viewbox>
         
     </Grid>
