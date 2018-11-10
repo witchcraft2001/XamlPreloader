@@ -10,12 +10,16 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Viewbox Grid.Column="0" Width="80" Height="80">
             <local:Preloader />
         </Viewbox>
         <Viewbox Grid.Column="1" Width="80" Height="80">
             <local:SimplePreloader />
+        </Viewbox>
+        <Viewbox Grid.Column="2" Width="80" Height="80">
+            <local:BouncingCirclesPreloader />
         </Viewbox>
         
     </Grid>
